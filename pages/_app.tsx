@@ -4,12 +4,12 @@ import type { AppProps } from 'next/app';
 
 import '../styles/index.css';
 
-function MyApp({ Component, pageProps }: AppProps) {
+const MyApp = ({ Component, pageProps }: AppProps) => {
   return (
     <Auth.UserContextProvider supabaseClient={supabase}>
       <Component {...pageProps} />
     </Auth.UserContextProvider>
   );
-}
+};
 
 export default MyApp;

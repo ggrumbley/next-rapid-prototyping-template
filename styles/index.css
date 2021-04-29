@@ -29,6 +29,9 @@
 html, body, #__next {
   height: 100vh;
   min-height: 100vh;
+  background: #2E2157;
+  font-family: Helvetica, Arial, Sans-Serif;
+  color: #fff
 }
 
 h1 {
