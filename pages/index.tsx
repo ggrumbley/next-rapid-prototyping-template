@@ -1,8 +1,8 @@
-import { TodoList } from '../components/Todo';
+import { TodoList } from '../features/TodoList';
 import { AuthGuard } from '../components/AuthGuard';
 import { supabase } from '../utils';
 
-const Home = () => (
+const Home: React.FC = () => (
   <div className="dark grid place-content-center w-full h-full">
     <AuthGuard>
       <TodoList />
