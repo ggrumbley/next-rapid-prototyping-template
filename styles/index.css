@@ -1,6 +1,19 @@
 @tailwind base;
 
 /* Write your own custom base styles here */
+html, body, #__next {
+  height: 100vh;
+  min-height: 100vh;
+  background-image: linear-gradient(260deg, #2376ae 0%, #c16ecf 100%);
+  color: #fff
+}
+
+h1 {
+  font-size: 4rem;
+  font-weight: bold;
+  display: block;
+}
+
 
 /* Start purging... */
 @tailwind components;
@@ -26,16 +39,4 @@
 
 /* Your own custom utilities */
 
-html, body, #__next {
-  height: 100vh;
-  min-height: 100vh;
-  background: #2E2157;
-  font-family: Helvetica, Arial, Sans-Serif;
-  color: #fff
-}
 
-h1 {
-  font-size: 4rem;
-  font-weight: bold;
-  display: block;
-}
