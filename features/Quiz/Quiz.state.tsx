@@ -18,12 +18,12 @@ type StoreState = {
   loading: boolean;
   questions: QuestionsState[];
   questionNumber: number;
-  userAnswers: Answer[] | never;
+  userAnswers: Answer[];
   score: number;
   gameOver: boolean;
 };
 
-export const INITIAL_STATE = {
+export const INITIAL_STATE: StoreState = {
   loading: false,
   questions: [],
   questionNumber: 0,

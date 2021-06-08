@@ -38,11 +38,9 @@ export const Quiz: React.FC = () => {
       answer,
       correct,
       correctAnswer,
-    } as Answer;
+    };
 
-    if (userAnswer) {
-      dispatch({ type: Actions.SET_USER_ANSWERS, payload: userAnswer });
-    }
+    dispatch({ type: Actions.SET_USER_ANSWERS, payload: userAnswer });
   };
 
   const nextQuestion = () => {
