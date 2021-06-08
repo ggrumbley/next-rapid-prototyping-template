@@ -14,9 +14,9 @@ export const Counter = () => {
   const incrementValue = Number(incrementAmount) || 0;
 
   const incrementIfOdd = (value: number) => {
-    if (value % 2 === 1) {
-      dispatch({ type: Actions.INCREMENT_BY_AMOUNT, payload: value });
-    }
+    if (value % 2 !== 1) return;
+
+    dispatch({ type: Actions.INCREMENT, payload: value });
   };
 
   const incrementAsync = async (amount: number) => {
@@ -25,7 +25,7 @@ export const Counter = () => {
   };
 
   return (
-    <div>
+    <div className="rounded-md p-12 border-2 border-indigo-500 shadow-md bg-indigo-50">
       <div className={styles.row}>
         <button
           className={styles.button}
@@ -59,7 +59,7 @@ export const Counter = () => {
         <button className={styles.asyncButton} onClick={() => incrementAsync(incrementValue)}>
           Add Async
         </button>
-        <button className={styles.button} onClick={() => incrementIfOdd(incrementValue)}>
+        <button className={styles.button} onClick={() => incrementIfOdd(value)}>
           Add If Odd
         </button>
       </div>
