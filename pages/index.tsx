@@ -1,10 +1,12 @@
 import { AuthGuard } from '../components/AuthGuard';
 import { supabase } from '../utils';
-import { Counter } from '../features/counter/Counter';
+import { Counter } from '../features/Counter/Counter';
+import { Quiz } from '../features/Quiz/Quiz';
+
 const Home: React.FC = () => (
   <div className="dark grid gap-8 grid-cols-2 grid-flow-row auto-rows-max m-20">
     <Counter />
-    <div>QUIZ Will Go here!</div>
+    <Quiz />
     <div className="flex justify-center content-center p-10">
       <AuthGuard>
         <h2>You are authed!</h2>

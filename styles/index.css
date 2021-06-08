@@ -2,6 +2,7 @@
 
 /* Write your own custom base styles here */
 html, body, #__next {
+  @apply bg-cover;
   height: 100vh;
   min-height: 100vh;
   background-image: linear-gradient(260deg, #2376ae 0%, #c16ecf 100%);
@@ -19,19 +20,31 @@ h1 {
 @tailwind components;
 /* Stop purging. */
 
-/* Write your own custom component styles here */
-.btn-black {
-  @apply border border-black bg-black text-white font-bold py-2 px-4 rounded text-center;
+.start, .next {
+  @apply cursor-pointer text-white border-2 border-indigo-600 bg-gradient-to-tr from-indigo-300 to-indigo-500 rounded-md py-0 px-10 my-10 mx-0 h-10 shadow-lg;
 }
-.btn-black:hover {
-  @apply transition duration-150 bg-white text-black;
+
+.question-card {
+  @apply max-w-lg rounded-md px-20 py-12 text-center border-2 border-indigo-500 shadow-md bg-indigo-50;
 }
-.btn-black-outline {
-  @apply border border-black text-black py-2 px-4 rounded font-bold text-center;
+
+.button-wrapper {
+  @apply hover:opacity-80 transition-all duration-300 ease-in-out;
 }
-.btn-black-outline:hover {
-  @apply transition duration-150 bg-black text-white;
+
+.answer-button {
+  @apply cursor-pointer select-none text-sm w-full h-12 mx-0 my-4 rounded-md border-2 border-white shadow text-white;
+  text-shadow: 0px 1px 0px rgba(0, 0, 0, 0.25);
+  background: linear-gradient(260deg, #2376ae 0%, #c16ecf 100%);
 }
+
+.correct-answer {
+  background: linear-gradient(90deg, #56FFA4, #59BC86);
+}
+
+.wrong-answer {
+  background: linear-gradient(90deg, #FF5656, #C16868);
+};
 
 /* Start purging... */
 @tailwind utilities;
