@@ -6,7 +6,7 @@ import { Quiz } from '../features/Quiz/Quiz';
 const Home: React.FC = () => (
   <div className="dark grid gap-8 grid-cols-2 grid-flow-row auto-rows-max m-20">
     <Counter />
-    <Quiz />
+    {/* <Quiz /> */}
     <div className="flex justify-center content-center p-10">
       <AuthGuard>
         <h2>You are authed!</h2>
