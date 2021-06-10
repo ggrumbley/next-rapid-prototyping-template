@@ -14,7 +14,7 @@ const initialState: CounterState = {
 };
 
 export const incrementAsync = createAsyncThunk('counter/fetchCount', async (amount: number) => {
-  const response = await $fetch.get(amount);
+  const response = await $fetch.post('/api/counter', { body: { amount } });
 
   return response.data;
 });

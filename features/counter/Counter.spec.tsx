@@ -2,8 +2,8 @@ import { render, screen } from '@testing-library/react';
 import user from '@testing-library/user-event';
 import { Provider } from 'react-redux';
 
-jest.mock('./counterAPI', () => ({
-  fetchCount: (amount: number) =>
+jest.mock('../../utils', () => ({
+  $fetch: (amount: number) =>
     new Promise<{ data: number }>((resolve) => setTimeout(() => resolve({ data: amount }), 500)),
 }));
 

@@ -1,7 +1,8 @@
-import type { InitialOptionsTsJest } from 'ts-jest/dist/types'
+import type { InitialOptionsTsJest } from 'ts-jest/dist/types';
 
 const config: InitialOptionsTsJest = {
   preset: 'ts-jest',
+  setupFiles: ['<rootDir>/.jest/setEnvVars.js'],
   setupFilesAfterEnv: ['<rootDir>/setupTests.ts'],
   transform: {
     '.+\\.(css|styl|less|sass|scss)$': 'jest-css-modules-transform',
@@ -11,6 +12,6 @@ const config: InitialOptionsTsJest = {
       tsconfig: 'tsconfig.test.json',
     },
   },
-}
+};
 
-export default config
+export default config;
