@@ -1,21 +1,11 @@
 /* bling.js */
 
 /*
-  BLING DOM
-  A tiny DOM manipulation tool inspired by jQUery
-*/
-
-/*
   BLING FETCH
   A tiny Axios-like wrapper around fetch()
 */
 
-interface FetchParams {
-  endpoint: string;
-  Object;
-}
-
-export const $fetch = async (endpoint, { body, ...customConfig } = {}): Promise<FetchParams> => {
+export const $fetch = async (endpoint, { body, ...customConfig } = {}) => {
   if (typeof window === 'undefined') {
     console.log('No window present');
 
