@@ -1,9 +1,9 @@
 import { Auth } from '@supabase/ui';
 import { Provider } from 'react-redux';
-import { supabase } from '../utils';
 import type { AppProps } from 'next/app';
 
-import { store } from '../store';
+import { supabase } from 'utils/initSupabase';
+import { store } from 'utils/store';
 
 import '../styles/index.css';
 

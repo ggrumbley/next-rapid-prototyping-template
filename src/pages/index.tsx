@@ -1,7 +1,7 @@
-import { AuthGuard } from '../components/AuthGuard';
-import { supabase } from '../utils';
-import { Counter } from '../features/Counter/Counter';
-import { Quiz } from '../features/Quiz/Quiz';
+import { AuthGuard } from 'components/AuthGuard';
+import { supabase } from 'utils/initSupabase';
+import { Counter } from 'features/Counter/Counter';
+import { Quiz } from 'features/Quiz/Quiz';
 
 const Home: React.FC = () => (
   <div className="dark grid gap-8 grid-cols-2 grid-flow-row auto-rows-max m-20">

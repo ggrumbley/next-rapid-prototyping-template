@@ -2,12 +2,12 @@ import { render, screen } from '@testing-library/react';
 import user from '@testing-library/user-event';
 import { Provider } from 'react-redux';
 
-jest.mock('../../utils', () => ({
+jest.mock('utils/bling', () => ({
   $fetch: (amount: number) =>
     new Promise<{ data: number }>((resolve) => setTimeout(() => resolve({ data: amount }), 500)),
 }));
 
-import { store } from '../../store';
+import { store } from 'utils/store';
 import { Counter } from './Counter';
 
 describe('<Counter />', () => {

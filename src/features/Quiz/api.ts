@@ -1,5 +1,5 @@
 import { Question, Difficulty, QuestionsState } from './types';
-import { $fetch } from '../../utils';
+import { $fetch } from 'utils/bling';
 
 export const shuffleArray = (array: any[]) => [...array].sort(() => Math.random() - 0.5);
 

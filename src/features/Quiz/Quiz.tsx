@@ -1,6 +1,6 @@
 import React from 'react';
 import { QuestionCard } from './components/QuestionCard';
-import { Spinner } from '../../components/Spinner';
+import { Spinner } from 'components/Spinner';
 import { useStore, Actions } from './Quiz.state';
 import { fetchQuizQuestions } from './api';
 import { Difficulty } from './types';

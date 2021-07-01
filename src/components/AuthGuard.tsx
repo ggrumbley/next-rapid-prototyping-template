@@ -1,6 +1,7 @@
 import React from 'react';
 import { Auth, Card, Space, Typography } from '@supabase/ui';
-import { supabase } from '../utils';
+
+import { supabase } from 'utils/initSupabase';
 
 export const AuthGuard: React.FC = ({ children }) => {
   const { user } = Auth.useUser();
