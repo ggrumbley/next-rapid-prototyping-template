@@ -10,7 +10,12 @@
   A tiny Axios-like wrapper around fetch()
 */
 
-export const $fetch = async (endpoint, { body, ...customConfig } = {}) => {
+interface FetchParams {
+  endpoint: string;
+  Object;
+}
+
+export const $fetch = async (endpoint, { body, ...customConfig } = {}): Promise<FetchParams> => {
   if (typeof window === 'undefined') {
     console.log('No window present');
 
