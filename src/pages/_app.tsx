@@ -3,7 +3,7 @@ import { Provider } from 'react-redux';
 import type { AppProps } from 'next/app';
 
 import { supabase } from 'utils/initSupabase';
-import { store } from 'utils/store';
+import { store } from 'features/store';
 
 import '../styles/index.css';
 

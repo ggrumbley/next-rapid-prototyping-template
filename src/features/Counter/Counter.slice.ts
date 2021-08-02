@@ -1,6 +1,7 @@
 import { createAsyncThunk, createSlice, PayloadAction } from '@reduxjs/toolkit';
+import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
 
-import type { AppState, AppThunk } from 'utils/store';
+import type { AppState, AppThunk } from '../store';
 import { $fetch } from 'utils/bling';
 
 export interface CounterState {

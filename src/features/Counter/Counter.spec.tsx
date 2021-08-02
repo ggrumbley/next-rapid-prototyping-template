@@ -7,7 +7,7 @@ jest.mock('utils/bling', () => ({
     new Promise<{ data: number }>((resolve) => setTimeout(() => resolve({ data: amount }), 500)),
 }));
 
-import { store } from 'utils/store';
+import { store } from '../store';
 import { Counter } from './Counter';
 
 describe('<Counter />', () => {
